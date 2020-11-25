@@ -7,6 +7,8 @@ const Constraint = Matter.Constraint;
 var roof0;
 var ball1, ball2, ball3, ball4, ball5;
 var rope1, rope2, rope3, rope4, rope5;;
+var anchor2X = pointB.x+this.offsetX; 
+var anchor2Y = pointB.y+this.offsetY;
 
 
 function setup() {
@@ -24,11 +26,11 @@ function setup() {
 	ball4 = new ball(700,400,100);
 	ball5 = new ball(800,400,100);
 
-	rope1 = new Rope(ball1.body, roof0.body, 0, 0);
-	rope2 = new Rope(ball2.body, roof0.body, 0, 0);
-	rope3 = new Rope(ball3.body, roof0.body, 0, 0);
-	rope4 = new Rope(ball4.body, roof0.body, 0, 0);
-	rope5 = new Rope(ball5.body, roof0.body, 0, 0);
+	rope1 = new Rope(ball1.body, roof0.body, anchor2X, anchor2Y);
+	rope2 = new Rope(ball2.body, roof0.body, anchor2X, anchor2Y);
+	rope3 = new Rope(ball3.body, roof0.body, anchor2X, anchor2Y);
+	rope4 = new Rope(ball4.body, roof0.body, anchor2X, anchor2Y);
+	rope5 = new Rope(ball5.body, roof0.body, anchor2X, anchor2Y);
 
 
 	Engine.run(engine);
